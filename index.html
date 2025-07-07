@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="images/ubuntu.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+   <div id="banner-container">
+      <div id="banner">
+        <div class="slide"><img src="images/2560-x-1440-car-36abrydkp7jeurvd.jpg" alt="1"></div>
+        <div class="slide"><img src="images/Nissan_Tuning_GT-R_White_576101_2560x1440.jpg" alt="2"></div>
+        <div class="slide"><img src="images/2560-x-1440-car-ibndj2lyyivps9dj.jpg" alt="3"></div>
+      </div>
+   </div>
+
+   <div id="med"><strong>Lorem ipsum dolor sit amet consectetur adipisicing elit</strong></div>
+
+   <div id="cont">
+        <div id="cl">
+            <h3><strong>Destinos</strong></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est, reiciendis dolore praesentium laboriosam suscipit molestiae! Saepe deserunt nemo a odit dolores voluptatum impedit dicta eius commodi dolorem? Ipsum, nisi.</p>
+            <img src="images/wa1.avif" alt="">
+        </div>
+        <div id="cl">
+         <h3><strong>Destinos</strong></h3>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem est, reiciendis dolore praesentium laboriosam suscipit molestiae! Saepe deserunt nemo a odit dolores voluptatum impedit dicta eius commodi dolorem? Ipsum, nisi.</p>
+         <img src="images/wa2.avif" alt="">
+        </div>
+        <div id="frm">
+         <h3><strong>Registrate</strong></h3>
+         <form action="https://www.google.com/" name="datos_usuario">
+            <p><strong>Nombre</strong></p>
+            <input type="text">
+            <p><strong>Correo</strong></p>
+            <input type="email" placeholder="example@email.com">
+            <br> <br>
+            <input type="submit">
+        </form>
+        </div>
+   </div>
+
+   
+<footer id="pie">
+   <div class="iconos-footer">
+     <a href="https://facebook.com" target="_blank" title="Facebook">
+       <i class="fab fa-facebook fa-2x"></i>
+     </a>
+     <a href="https://twitter.com" target="_blank" title="Twitter">
+       <i class="fab fa-twitter fa-2x"></i>
+     </a>
+     <a href="https://github.com" target="_blank" title="GitHub">
+       <i class="fab fa-github fa-2x"></i>
+     </a>
+   </div>
+ </footer>
+
+   <script>
+      $(document).ready(function(){
+        const totalSlides = $('.slide').length;
+        let current = 0;
+    
+        setInterval(() => {
+          current = (current + 1) % totalSlides;
+          $('#banner').css('transform', `translateX(-${100 * current}vw)`);
+        }, 3000);
+      });
+   </script>
+</body>
+</html>
